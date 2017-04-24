@@ -6,8 +6,8 @@ mail = Mail(app)
 
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'mauriziocontatto@gmail.com'
-app.config['MAIL_PASSWORD'] = 'Sn1p3r1992'
+app.config['MAIL_USERNAME'] = '*************'
+app.config['MAIL_PASSWORD'] = '***'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -15,8 +15,8 @@ mail = Mail(app)
 
 @app.route('/')
 def index():
-    msg = Message('mail con <b>Flask</b>', sender='mauriziocontatto@gmail.com', recipients=['maurizio.bussi@hotmail.it'])
-    msg.body = "ahhahaha ti faccio un while di mail.send(msg)... funny arrivooooooo :P"
+    msg = Message('mail con <b>Flask</b>', sender='*******', recipients=['********'])
+    msg.body = "body of the email"
     mail.send(msg)
     return 'Sent'
 
