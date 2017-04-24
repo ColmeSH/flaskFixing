@@ -8,15 +8,15 @@ app = Flask(__name__)
 def hello_world():
     return 'hello world'
 
-@app.route('/home')
-def hi():
-    return 'hi i\'m home '
-
-
-#tutorialsprint variable name
 @app.route('/hello/<name>')
 def hello_name(name):
     return 'hello {}'.format(name)
+
+
+@app.route('/home')
+def hi():
+    return 'hi i\'m home '
+#tutorialsprint variable name
 
 @app.route('/blog/<int:postID>')
 def show_blog(postID):
@@ -29,7 +29,7 @@ def revision(number):
 
 
 
-#running application
 if __name__ == '__main__':
     app.run(debug=True)
+#running application
 
